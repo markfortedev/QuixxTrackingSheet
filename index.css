@@ -1,0 +1,66 @@
+
+html, body {
+    margin: 0;
+}
+
+.score-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+tbody {
+    display: flex;
+}
+
+tr {
+    display: flex;
+}
+
+td {
+    font-size: 100%;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (orientation: landscape) {
+    tbody {
+        flex-direction: column;
+    }
+    tr {
+        flex-direction: row;
+    }
+    td {
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+    button {
+        font-size: 200%;
+    }
+}
+
+@media (orientation: portrait) {
+    tbody {
+        flex-direction: row;
+    }
+
+    tr {
+        flex-direction: column;
+    }
+    td {
+        width: 6.5vh;
+        height: 6.5vh;
+    }
+    button {
+        font-size: 400%;
+    }
+}
