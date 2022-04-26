@@ -46,6 +46,10 @@ body {
     color: #611f24
 }
 
+.red button:hover:enabled {
+    background-color: #ffeee5;
+}
+
 .yellow {
     background-color: #fee44a;
     outline-color: #d8a352;
@@ -63,6 +67,10 @@ body {
 .yellow button:disabled {
     background-color: #cac6c0;
     color: #cbb63b
+}
+
+.yellow button:hover:enabled {
+    background-color: #fefff2;
 }
 
 .green {
@@ -84,6 +92,10 @@ body {
     color: #2c6c3d
 }
 
+.green button:hover:enabled {
+    background-color: #f6faff;
+}
+
 .blue {
     background-color: #394a8b;
     outline-color: #2d2e4b;
@@ -101,6 +113,10 @@ body {
 .blue button:disabled {
     background-color: #b3b0bf;
     color: #242e57
+}
+
+.blue button:hover:enabled {
+    background-color: #faecff;
 }
 
 tbody {
@@ -127,6 +143,10 @@ button {
     background: none;
     color: inherit;
     font: inherit;
+}
+
+button:hover:enabled {
+    cursor: pointer;
 }
 
 @media (orientation: landscape) {
