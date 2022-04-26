@@ -1,15 +1,106 @@
 
 html, body {
     margin: 0;
+    background-color: #e3e3e3;
 }
 
-.score-holder {
+body {
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    padding: 1vh 1vw 1vh 1vw;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.spacer {
+    border: none;
+}
+
+.row {
+    outline-style: solid;
+}
+
+.spacer {
+    background: none;
+}
+
+.red {
+    background-color: #d73f4c;
+    outline-color: #943037;
+    color: #d73f4c
+}
+
+.red td {
+    background-color: #943037;
+}
+
+.red button {
+    background-color: #f9e0e5;
+}
+
+.red button:disabled {
+    background-color: #c5b2b6;
+    color: #611f24
+}
+
+.yellow {
+    background-color: #fee44a;
+    outline-color: #d8a352;
+    color: #fee44a
+}
+
+.yellow td {
+    background-color: #d8a352;
+}
+
+.yellow button {
+    background-color: #fdf9f1;
+}
+
+.yellow button:disabled {
+    background-color: #cac6c0;
+    color: #cbb63b
+}
+
+.green {
+    background-color: #419f5b;
+    outline-color: #3f7c52;
+    color: #419f5b
+}
+
+.green td {
+    background-color: #3f7c52;
+}
+
+.green button {
+    background-color: #ebf3f1;
+}
+
+.green button:disabled {
+    background-color: #b9c0be;
+    color: #2c6c3d
+}
+
+.blue {
+    background-color: #394a8b;
+    outline-color: #2d2e4b;
+    color: #394a8b
+}
+
+.blue td {
+    background-color: #2d2e4b;
+}
+
+.blue button {
+    background-color: #e4e0f2;
+}
+
+.blue button:disabled {
+    background-color: #b3b0bf;
+    color: #242e57
 }
 
 tbody {
@@ -21,15 +112,21 @@ tr {
 }
 
 td {
+    display: flex;
     font-size: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border: none;
     margin: 0;
     padding: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
 }
 
 @media (orientation: landscape) {
@@ -42,10 +139,21 @@ button {
     td {
         width: 6.5vw;
         height: 6.5vw;
+        border-radius: 0.5vw;
+    }
+    .spacer {
+        height: 2vw;
+    }
+    .row {
+        padding: 1vw;
+        outline-width: 1vw;
+        border-radius: 1vw;
     }
     button {
-        font-size: 200%;
+        font-size: 4vw;
+        border-radius: 0.5vw;
     }
+
 }
 
 @media (orientation: portrait) {
@@ -59,8 +167,18 @@ button {
     td {
         width: 6.5vh;
         height: 6.5vh;
+        border-radius: 0.5vh;
+    }
+    .spacer {
+        width: 2.5vh;
+    }
+    .row {
+        padding: 1vh;
+        outline-width: 1vh;
+        border-radius: 1vh;
     }
     button {
-        font-size: 400%;
+        font-size: 4vh;
+        border-radius: 0.5vh;
     }
 }
