@@ -8,10 +8,9 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
     height: 100vh;
-    font-family: 'Architects Daughter', cursive;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -37,6 +36,11 @@ body {
     background-color: #943037;
 }
 
+.total td.red {
+    background-color: #f9e0e5;
+    border-color: #943037
+}
+
 .red button {
     background-color: #f9e0e5;
 }
@@ -50,6 +54,10 @@ body {
     background-color: #ffeee5;
 }
 
+.red img {
+    filter: invert(28%) sepia(58%) saturate(7167%) hue-rotate(344deg) brightness(102%) contrast(69%);
+}
+
 .yellow {
     background-color: #fee44a;
     outline-color: #d8a352;
@@ -58,6 +66,11 @@ body {
 
 .yellow td {
     background-color: #d8a352;
+}
+
+.total td.yellow {
+    background-color: #fdf9f1;
+    border-color: #d8a352
 }
 
 .yellow button {
@@ -73,6 +86,10 @@ body {
     background-color: #fefff2;
 }
 
+.yellow img {
+    filter: invert(90%) sepia(64%) saturate(1701%) hue-rotate(320deg) brightness(109%) contrast(104%);
+}
+
 .green {
     background-color: #419f5b;
     outline-color: #3f7c52;
@@ -81,6 +98,11 @@ body {
 
 .green td {
     background-color: #3f7c52;
+}
+
+.total td.green {
+    background-color: #ebf3f1;
+    border-color: #3f7c52
 }
 
 .green button {
@@ -96,6 +118,10 @@ body {
     background-color: #f6faff;
 }
 
+.green img {
+    filter: invert(56%) sepia(21%) saturate(1032%) hue-rotate(84deg) brightness(90%) contrast(92%);
+}
+
 .blue {
     background-color: #394a8b;
     outline-color: #2d2e4b;
@@ -104,6 +130,11 @@ body {
 
 .blue td {
     background-color: #2d2e4b;
+}
+
+.total td.blue {
+    background-color: #e4e0f2;
+    border-color: #2d2e4b
 }
 
 .blue button {
@@ -119,12 +150,51 @@ body {
     background-color: #faecff;
 }
 
+.blue img {
+    filter: invert(22%) sepia(44%) saturate(1392%) hue-rotate(199deg) brightness(102%) contrast(84%);
+}
+
+.scratch {
+    background-color: #e3e3e3;
+    outline-color: #000000;
+    color: #000000
+}
+
+.scratch td {
+    background-color: #000000;
+}
+
+.total td.scratch {
+    background-color: #e3e3e3;
+    border-color: #000000
+}
+
+.scratch button {
+    background-color: #e3e3e3;
+}
+
+.blue button:disabled {
+    background-color: #b0b0b0;
+}
+
+.scratch button:hover:enabled {
+    background-color: #fcfcfc;
+}
+
+.total {
+    background-color: #e3e3e3;
+    outline-color: #494949;
+    color: #494949
+}
+
 tbody {
     display: flex;
 }
 
 tr {
     display: flex;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 td {
@@ -149,56 +219,103 @@ button:hover:enabled {
     cursor: pointer;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
 @media (orientation: landscape) {
-    tbody {
-        flex-direction: column;
-    }
-    tr {
+
+    body {
         flex-direction: row;
-    }
-    td {
-        width: 6.5vw;
-        height: 6.5vw;
+        font-size: 4vw;
         border-radius: 0.5vw;
     }
+
+    .card-main {
+        flex-direction: column;
+    }
+    .card-main tr {
+        flex-direction: row;
+    }
+
+    .card-score {
+        flex-direction: row;
+    }
+    .card-score tr {
+        flex-direction: column;
+    }
+
+    td {
+        width: 6vw;
+        height: 6vw;
+        border-radius: 0.5vw;
+    }
+
+    .total td {
+        box-sizing: border-box;
+        border-width: 0.5vw;
+        border-style: solid;
+        font-size: 2.75vw;
+    }
+
     .spacer {
         height: 2vw;
+    }
+    .card-score .spacer {
+        width: 2vw;
     }
     .row {
         padding: 1vw;
         outline-width: 1vw;
         border-radius: 1vw;
     }
-    button {
-        font-size: 4vw;
-        border-radius: 0.5vw;
-    }
 
 }
 
 @media (orientation: portrait) {
-    tbody {
+    body {
+        flex-direction: column;
+        font-size: 4vh;
+        border-radius: 0.5vh;
+    }
+
+    .card-main {
+        flex-direction: row;
+    }
+    .card-main tr {
+        flex-direction: column;
+    }
+
+    .card-score {
+        flex-direction: column;
+    }
+    .card-score tr {
         flex-direction: row;
     }
 
-    tr {
-        flex-direction: column;
-    }
     td {
-        width: 6.5vh;
-        height: 6.5vh;
+        width: 6vh;
+        height: 6vh;
         border-radius: 0.5vh;
     }
+
+    .total td {
+        box-sizing: border-box;
+        border-width: 0.5vh;
+        border-style: solid;
+        font-size: 2.75vh;
+    }
+
     .spacer {
         width: 2.5vh;
+    }
+    .card-score .spacer {
+        height: 2.5vh;
     }
     .row {
         padding: 1vh;
         outline-width: 1vh;
         border-radius: 1vh;
-    }
-    button {
-        font-size: 4vh;
-        border-radius: 0.5vh;
     }
 }
